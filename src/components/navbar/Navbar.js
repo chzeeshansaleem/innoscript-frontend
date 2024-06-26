@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import logo from "../../assets/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 const Navbar = () => {
@@ -19,10 +19,9 @@ const Navbar = () => {
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
-            aria-expanded="true"
+            aria-expanded={!isCollapsed}
             aria-label="Toggle navigation"
             onClick={(e) => menuButton(e)}
-
           >
             <div class="container">
               <div class="bar1"></div>
