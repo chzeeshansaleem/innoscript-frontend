@@ -1,0 +1,817 @@
+.logo-img {
+    max-height: 50px; /* Define the maximum height of the logo */
+    max-width: 150px; /* Define the maximum width of the logo */
+  }
+  .navbar-collapse {
+    margin-left: 30%;
+  }
+  .nav-link,
+  .nav-link:hover {
+    color: #0c8898; /* White text color */
+  }
+  .navbar-nav .nav-link {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fc9424;
+    transition: width 1s ease;
+  }
+  
+  .navbar-nav .nav-link:hover::before {
+    width: 100%;
+  }
+  
+  .navbar-toggler {
+    outline: none !important; /* Remove button outline */
+  }
+  
+  #servicesDropdown:hover .dropdown-menu {
+    display: block;
+    background-color: #343a40;
+  }
+  
+  .dropdown > .dropdown-toggle:active {
+    pointer-events: none;
+  }
+  .dropdown-menu {
+    background-color: #343a40;
+    border-top-left-radius: 0; /* Adjust border-radius if needed */
+    max-height: calc(
+      100vh - 70px
+    ); /* Set maximum height to viewport height minus navbar height */
+  }
+  
+  .dropdown-menu .dropdown-item {
+    color: #0c8898; /* White text color */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #36454f; /* Darker background-color */
+  }
+  
+  .dropdown-menu .dropdown-item {
+    padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+  }
+  .contactBtn {
+    background-color: transparent; /* Set background color to transparent */
+    color: #fc9424; /* Set text color */
+    border: 2px solid #fc9424; /* Add border */
+    border-radius: 0; /* Adjust border-radius if needed */
+    transition: background-color 0.3s, color 0.3s; /* Add transition */
+  }
+  
+  .contactBtn:hover {
+    background-color: #fc9424; /* Change background color on hover */
+    color: #0c8898; /* Change text color on hover */
+  }
+  
+  .dropdown-menu .dropdown-item {
+    position: relative; /* Ensure relative positioning */
+    color: #0c8898; /* Default text color */
+  }
+  
+  .dropdown-menu .dropdown-item::before {
+    content: ""; /* Create pseudo-element for the bottom border */
+    position: absolute; /* Position the pseudo-element */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Initial position to start from the left */
+    width: 0; /* Initially, the width is 0 */
+    height: 2px; /* Height of the bottom border */
+    background-color: #fc9424; /* Color of the bottom border */
+    transition: width 1s ease; /* Define transition property */
+  }
+  
+  .dropdown-menu .dropdown-item:hover::before {
+    width: 100%; /* Increase width to 100% on hover */
+  }
+  
+  /* Style for active link in dropdown */
+  .dropdown-menu .dropdown-item.active {
+    background-color: #343a40; /* Background color for active link */
+  }
+  
+  /* Style for hover effect in dropdown */
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #343a40; /* Background color for hover */
+  }
+  
+  /* Style for bottom border */
+  .dropdown-menu .dropdown-item::before {
+    content: ""; /* Create pseudo-element for the bottom border */
+    position: absolute; /* Position the pseudo-element */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Initial position to start from the left */
+    width: 0; /* Initially, the width is 0 */
+    height: 2px; /* Height of the bottom border */
+    background-color: #fc9424; /* Color of the bottom border */
+    transition: width 0.5s ease; /* Define transition property */
+  }
+  
+  /* Style for active link */
+  .navbar-nav .nav-link.active::before {
+    width: 100%; /* Width set to 100% */
+  }
+  
+  .navbar-nav .nav-link {
+    color: #0c8898; /* Set the default text color */
+  }
+  
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:hover {
+    color: #0c8898; /* Set the text color for active, focus, and hover states */
+  }
+  .container1 {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fc9424; /* Changed from #333 to #fc9424 */
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  
+  /* main  */
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  
+  .slide video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+  }
+  
+  /* Style for the text */
+  .text {
+    margin-top: 20vh;
+    font-size: 60px;
+    font-weight: 700; /* Adjust font weight as needed */
+    margin-left: 30%; /* Adjust font size as needed */
+  }
+  .textColor {
+    color: #fc9424;
+    background-color: rgba(12, 136, 152, 0.5);
+  
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .description {
+    margin-left: 30%;
+  }
+  .btn1 {
+    text-decoration: none;
+    color: #fc9424;
+  }
+  .learnMore:hover > a {
+    color: #0c8898;
+  }
+  .arrow-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .left-arrow {
+    left: 20px;
+  }
+  
+  .right-arrow {
+    right: 20px;
+  }
+  
+  @media (max-width: 991.98px) {
+    /* Adjusted margin-left for navbar-collapse */
+    .navbar-collapse {
+      margin-left: 0; /* Adjusted to align with the left side */
+    }
+  }
+  /* For larger screens (desktops) */
+  
+  /* For medium screens (tablets) */
+  @media (max-width: 991.98px) and (min-width: 768px) {
+    /* Styles for tablet screens */
+    .text-container {
+      position: absolute;
+      top: 35%; /* Place the top of the container at the vertical center */
+      left: 20%; /* Adjust left position as needed */
+      transform: translate(
+        -50%,
+        -50%
+      ); /* Use transform to center both vertically and horizontally */
+      z-index: 1; /* Ensure the text appears above the video */
+      color: white; /* Adjust text color as needed */
+    }
+  
+    /* Style for the text */
+    .text {
+      margin-top: 20vh;
+      font-size: 45px;
+      font-weight: 700; /* Adjust font weight as needed */
+      margin-left: 30%; /* Adjust font size as needed */
+    }
+  
+    .description {
+      width: 70%;
+    }
+  }
+  
+  /* For smaller screens (mobile) */
+  @media (max-width: 767.98px) {
+    /* Styles for mobile screens */
+    .text-container {
+      position: absolute;
+      top: 35%; /* Place the top of the container at the vertical center */
+      left: 20%; /* Adjust left position as needed */
+      transform: translate(
+        -50%,
+        -50%
+      ); /* Use transform to center both vertically and horizontally */
+      z-index: 1; /* Ensure the text appears above the video */
+      color: white; /* Adjust text color as needed */
+    }
+  
+    /* Style for the text */
+    .text {
+      margin-top: 20vh;
+      font-size: 30px;
+      font-weight: 700; /* Adjust font weight as needed */
+      margin-left: 30%; /* Adjust font size as needed */
+    }
+  
+    .description {
+      width: 70%;
+    }
+  }
+  .textDecoration {
+    text-decoration: none;
+  }
+  .headingcolor {
+    color: #0c8898;
+  }
+  .linkcolor {
+    color: #fc9424;
+  }
+  @media (max-width: 576px) {
+    .Footer_Info,
+    .Footer_CompanyInfo,
+    .Footer_Support,
+    .Footer_SocailLinks {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  .navbar-nav1 .nav-link1 {
+    position: relative; /* Ensure relative positioning */
+  }
+  
+  .navbar-nav1 .nav-link1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fc9424;
+    transition: width 1s ease;
+  }
+  
+  .navbar-nav1 .nav-link1:hover::before {
+    width: 100%;
+  }
+  
+  /* services page  */
+  /* .text-center {
+  text-align: center !important;} */
+  .textColor1 {
+    color: #abb8c3;
+  }
+  
+  /* contact us page  */
+  .icon-size-lg {
+    font-size: 46px;
+  }
+  
+  .rounded {
+    border-radius: 0.25rem !important;
+  }
+  .gray-light-bg {
+    background: #f5f5f5 !important;
+  }
+  .p-5 {
+    padding: 3rem !important;
+  }
+  
+  .contact-info-list li .contact-icon span {
+    border: 1px solid #0c8898;
+  }
+  .contact-text {
+    margin-left: 20px;
+  }
+  
+  #about-us {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+  }
+  
+  #about-us h2 {
+    color: #fc9424; /* Primary accent color */
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #0c8898; /* Primary button color */
+    border: none;
+  }
+  
+  .about-us-btn:hover {
+    background-color: #fc9424; /* Button hover state */
+    border: none;
+  }
+  
+  #our-services {
+    background-color: #343a40; /* Dark background */
+    color: #fff; /* Light text */
+  }
+  
+  #our-services .card {
+    border: none;
+    border-radius: 0.5rem;
+    height: 25vh;
+    background-color: lightgrey;
+  }
+  
+  #our-services .card-title {
+    color: #fc9424; /* Primary color for titles */
+  }
+  
+  #our-services h2 {
+    color: #fc9424; /* Accent color */
+    padding-bottom: 1rem;
+  }
+  
+  #our-services .card.bg-light {
+    background-color: #f8f9fa !important; /* Light background for cards */
+  }
+  
+  #our-services .card-text {
+    color: #343a40; /* Dark text for readability */
+  }
+  .card:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card {
+    overflow: hidden; /* Ensures the scale transform doesn't overflow the parent div */
+  }
+  
+  /* contact us  */
+  
+  #contact-section {
+    /* Light background for better readability */
+  }
+  
+  #contact-section h2 {
+    margin-bottom: 20px;
+    color: #fc9424; /* Primary color for the section title */
+  }
+  
+  .btn-contactBtn:hover {
+    background-color: #0c8898; /* Darker shade for button hover state */
+    border-color: lightblue;
+  }
+  
+  @media (max-width: 768px) {
+    #contact-section .col-md-6 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* web develop */
+  
+  /* Main styles for the Web Development Services section */
+  .web-dev-section {
+    background-color: #f8f9fa; /* Light background for readability */
+    padding: 60px 0; /* Ample padding for visual space */
+  }
+  
+  .web-dev-section h2 {
+    color: #333; /* Dark color for the main title */
+    margin-bottom: 30px; /* Space below the title */
+    text-align: center; /* Center align the title */
+  }
+  
+  .web-dev-section .img-fluid {
+    border-radius: 5px; /* Rounded corners for images */
+    margin-bottom: 30px; /* Space below the images */
+  }
+  
+  .web-dev-section p.lead {
+    font-size: 18px; /* Larger font for the introductory text */
+    font-weight: 300; /* Lighter font weight for a modern feel */
+    color: #555; /* Slightly darker color for the lead paragraph */
+  }
+  
+  .web-dev-section h3 {
+    color: #0c8898; /* Primary color for subheadings */
+    margin-top: 25px; /* Space above the subheadings */
+  }
+  
+  .web-dev-section p {
+    color: #666; /* Standard text color for good contrast */
+    line-height: 1.6; /* Increased line height for readability */
+  }
+  
+  .web-dev-section a.btn-primary {
+    background-color: #0c8898; /* Button color that matches the theme */
+    border: none; /* Remove border from the button */
+    padding: 10px 20px; /* Padding inside the button */
+    color: #fff; /* Text color inside the button */
+    border-radius: 4px; /* Rounded corners for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .web-dev-section a.btn-primary:hover {
+    background-color: #fc9424; /* Change background color on hover */
+    text-decoration: none; /* Remove text underline on hover */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .web-dev-section .img-fluid {
+      margin-bottom: 20px; /* Reduce space for smaller screens */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .web-dev-section {
+      padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+  
+    .web-dev-section h2 {
+      font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+  
+    .web-dev-section p.lead {
+      font-size: 16px; /* Adjust lead paragraph size for smaller screens */
+    }
+  }
+  
+  /* custom software page  */
+  #custom-software-development-hero {
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  #custom-software-development-hero .hero-content h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    color: #fc9424;
+  }
+  
+  #custom-software-development-hero .hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* If you want a gradient like the screenshot */
+  #custom-software-development-hero {
+    background: linear-gradient(120deg, #023047 40%, #011627 100%);
+  }
+  
+  /* Add a dark overlay if the background is too bright */
+  /* #custom-software-development-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  } */
+  
+  #custom-software-development-hero .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #custom-software-development-hero .hero-content {
+      padding: 0; /* Adjust padding to ensure content doesn't overflow */
+    }
+  
+    /* Additional adjustments for smaller screens */
+    #custom-software-development-hero .hero-content h1,
+    #custom-software-development-hero .hero-content p {
+      word-wrap: break-word; /* This helps prevent overflow due to unbreakable text strings */
+    }
+  }
+  
+  /* General rule for all elements to prevent overflow */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Additional utility class for elements that might cause overflow */
+  .no-overflow {
+    overflow: hidden;
+  }
+  
+  @media (max-width: 576px) {
+    #custom-software-development-hero .hero-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    #custom-software-development-hero .hero-content p {
+      font-size: 0.9rem;
+      padding: 0 20px;
+    }
+  
+    /* If the hero section is too tall on mobile, adjust the height as follows: */
+    #custom-software-development-hero {
+      height: 60vh;
+      padding-top: 10vh; /* To push the content down a little */
+    }
+  }
+  
+  .custom-software-development-section .container {
+    margin-top: 50px;
+  }
+  .custom-software-description-services {
+    margin-bottom: 50px;
+  }
+  .custom-software-development-section .custom-software-description-services h2 {
+    color: #fc9424;
+  }
+  .custom-software-development-section .custom-software-description-services p {
+    color: white;
+    font-size: 20px;
+  }
+  .custom-software-development-section {
+    padding: 50px 0;
+    color: white;
+  }
+  
+  .custom-software-development-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .software-development-process {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .software-development-process li {
+    margin-bottom: 25px;
+    font-size: 20px; /* adjust as needed */
+    position: relative;
+    padding-left: 30px;
+    border-bottom: 1px solid #fc9424;
+  }
+  
+  .software-development-process li::before {
+    content: "✔"; /* Unicode checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0c8898; /* Use the color you prefer */
+    font-size: 20px; /* adjust as needed */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .custom-software-development-section .row {
+      flex-direction: column;
+    }
+  
+    .custom-software-development-section .row .col-md-6 {
+      margin-bottom: 20px;
+    }
+  }
+  .benefits-section {
+    background: #f4f4f4; /* Your preferred background color */
+    padding: 40px 0;
+  }
+  
+  .benefits-section h2 {
+    color: #fc9424; /* Your preferred color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .benefits-section .benefits-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .benefits-section .benefits-list li {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    padding-left: 30px; /* Space for the bullet */
+    margin-bottom: 15px; /* Space between list items */
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust font size as necessary */
+  }
+  
+  .benefits-section .benefits-list li::before {
+    content: "•"; /* Bold dot character */
+    color: #fc9424; /* Bullet color */
+    font-size: 20px; /* Bullet size, can be bigger than the text */
+    font-weight: bold; /* Make the bullet bold */
+    position: absolute; /* Position it absolutely within the li */
+    left: 0; /* Align it to the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .benefits-section .benefits-list li {
+      font-size: 16px; /* Smaller font size on mobile */
+    }
+  }
+  
+  .working-process-section {
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .working-process-details h2 {
+  }
+  .section-title {
+    color: #fc9424 !important;
+    margin-bottom: 1rem;
+  }
+  
+  .section-description {
+    margin-bottom: 2rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .process-step {
+    background: url("") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .process-icon {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent circles */
+    border-radius: 50%;
+    padding: 30px;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 5px 5px 5px #fc9424, -5px -5px 5px #fc9424;
+  }
+  
+  .process-icon span {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .process-step h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .process-step p {
+    color: #ccc;
+  }
+  .container1 {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fc9424; /* Changed from #333 to #fc9424 */
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  @media (max-width: 992px) {
+    .process-step {
+      padding: 1rem;
+    }
+  
+    .process-icon {
+      padding: 20px;
+    }
+  
+    .process-icon span {
+      font-size: 1.5rem;
+    }
+  }
+  
