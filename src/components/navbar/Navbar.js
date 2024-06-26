@@ -1,110 +1,109 @@
 import React, { useState } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-const Navbar = () => {
+import "./Navbar.css"; // Import your custom CSS for hover functionality
+
+const MyNavbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
-  const menuButton = (e) => {
+
+  const toggleMenu = () => {
     setIsCollapsed(!isCollapsed);
-    e.currentTarget.classList.toggle("change");
   };
+
   return (
     <header className="sticky-top">
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-        <div className="container d-flex justify-content-between align-items-center">
-          <a className="navbar-brand" href="#">
+      <Navbar expand="lg" className="navbar" variant="dark">
+        <Container className="d-flex justify-content-between align-items-center">
+          <Navbar.Brand href="#">
             <img src={logo} alt="Innoscript logo" className="logo-img" />
-          </a>
+          </Navbar.Brand>
+
+          {/* Custom menu button for mobile */}
           <div
-            className="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded={!isCollapsed}
-            aria-label="Toggle navigation"
-            onClick={(e) => menuButton(e)}
+            className={`container1 d-lg-none ${isCollapsed ? "" : "change"}`}
+            onClick={toggleMenu}
           >
-            <div class="container">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </div>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
           </div>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav w-100 justify-content-around">
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item dropdown" id="servicesDropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Services
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="/web-development">
-                      Web Development
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/mobile-app-development">
-                      Mobile App Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="/custom-software-development"
-                    >
-                      Custom Software Development
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/devops-services">
-                      DevOps Services
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/ui-ux-designing">
-                      UI/UX Designing
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/seo">
-                      SEO
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#blog">
-                  Blogs
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/about-us">
-                  About us
-                </a>
-              </li>
-              <li className="nav-item">
-                <button className=" contactBtn" href="#contact">
+          <Navbar.Collapse id="basic-navbar-nav" className={`${isCollapsed ? "" : "show"}`}>
+            <Nav className="w-100 justify-content-around">
+              <NavItemWithHover
+                href="/"
+                text="Home"
+              />
+              <NavItemWithHover
+                text="Services"
+                isDropdown
+                isCollapsed={isCollapsed}
+              />
+              <NavItemWithHover
+                href="/blog"
+                text="Blogs"
+              />
+              <NavItemWithHover
+                href="/about-us"
+                text="About us"
+              />
+              <Nav.Item>
+                <button className="primary-btn" href="#contact">
                   Contact us
                 </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 };
 
-export default Navbar;
+const NavItemWithHover = ({
+  href,
+  text,
+  isDropdown,
+  isCollapsed
+}) => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <Nav.Item
+      onMouseEnter={() => setIsDropdownOpen(true)}
+      onMouseLeave={() => setIsDropdownOpen(false)}
+    >
+      {isDropdown ? (
+        <div className={`dropdown ${isDropdownOpen ? "show" : ""}`}>
+          <Nav.Link
+            className="dropdown-toggle"
+            role="button"
+            aria-expanded={isDropdownOpen}
+            onClick={handleDropdownToggle}
+          >
+            {text}
+          </Nav.Link>
+          <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
+            <ul>
+              <li><a  class="dropdown-item" href="/web-development">Web Development</a></li>
+              <li><a class="dropdown-item" href="/mobile-app-development">Mobile App Development</a></li>
+              <li><a   class="dropdown-item"  href="/custom-software-development">Custom Software Development</a></li>
+              <li><a  class="dropdown-item" href="/devops-services">DevOps Services</a></li>
+              <li><a  class="dropdown-item" href="/ui-ux-designing">UI/UX Designing</a></li>
+              <li><a   class="dropdown-item"href="/seo">SEO</a></li>
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <Nav.Link href={href}>{text}</Nav.Link>
+      )}
+    </Nav.Item>
+  );
+};
+
+export default MyNavbar;
