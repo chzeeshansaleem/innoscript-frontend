@@ -49,7 +49,7 @@ const MyNavbar = () => {
                 text="About us"
               />
               <Nav.Item>
-                <button className="primary-btn" href="#contact">
+                <button className="primary-btn" href="/contact">
                   Contact us
                 </button>
               </Nav.Item>
