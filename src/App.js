@@ -6,8 +6,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './components/home/Home';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NotFoundPage from './components/404Page/NotFoundPage';
+import AboutUs from './components/aboutUs/AboutUs';
+import WebDevelopment from './components/services/webDevelopment/WebDevelopment';
 
 const App = ()=> {
   useEffect(() => {
@@ -17,16 +19,19 @@ const App = ()=> {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <MyNavbar />
-        <Home/>
-        <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="*" component={NotFoundPage} />
-        </Routes>
+
+      <div>
+    
+      <MyNavbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/web-development" element={<WebDevelopment/>}/>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+  
       </div>
-    </Router>
+
   );
 }
 

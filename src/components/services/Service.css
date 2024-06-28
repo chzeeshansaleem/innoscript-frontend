@@ -5,3 +5,259 @@
 .service-heading{
 padding-bottom: 50px;
 }
+
+#custom-software-development-hero {
+    background-size: cover;
+    color:white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#custom-software-development-hero .hero-content h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem;
+    line-height: 1.2;
+    color: #fc9424;
+}
+
+#custom-software-development-hero .hero-content p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* If you want a gradient like the screenshot */
+#custom-software-development-hero {
+    background: linear-gradient(120deg, #023047 40%, #011627 100%);
+}
+
+/* Add a dark overlay if the background is too bright */
+/* #custom-software-development-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+} */
+
+#custom-software-development-hero .hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #custom-software-development-hero .hero-content {
+        padding: 0; /* Adjust padding to ensure content doesn't overflow */
+    }
+    
+    /* Additional adjustments for smaller screens */
+    #custom-software-development-hero .hero-content h1,
+    #custom-software-development-hero .hero-content p {
+        word-wrap: break-word; /* This helps prevent overflow due to unbreakable text strings */
+    }
+}
+
+@media (max-width: 576px) {
+    #custom-software-development-hero .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    #custom-software-development-hero .hero-content p {
+        font-size: 0.9rem;
+        padding: 0 20px;
+    }
+    
+    /* If the hero section is too tall on mobile, adjust the height as follows: */
+    #custom-software-development-hero {
+        height: 60vh;
+        padding-top: 10vh; /* To push the content down a little */
+    }
+}
+
+.custom-software-development-section .container{
+    margin-top: 50px;
+}
+.custom-software-description-services{
+    margin-bottom: 50px;
+}
+.custom-software-development-section .custom-software-description-services h2{
+    color: #fc9424;
+}
+.custom-software-development-section .custom-software-description-services p{
+   color: white;
+   font-size: 20px
+}
+.custom-software-development-section {
+    padding: 50px 0;
+  color: white;
+}
+
+.custom-software-development-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.software-development-process {
+    list-style: none;
+    padding: 0;
+}
+
+.software-development-process li {
+    margin-bottom: 25px;
+    font-size: 20px; /* adjust as needed */
+    position: relative;
+    padding-left: 30px;
+    border-bottom: 1px solid #fc9424;
+}
+
+.software-development-process li::before {
+    content: '✔'; /* Unicode checkmark */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color:#0c8898; /* Use the color you prefer */
+    font-size: 20px; /* adjust as needed */
+}
+
+@media screen and (max-width: 768px) {
+    .custom-software-development-section .row {
+        flex-direction: column;
+    }
+    
+    .custom-software-development-section .row .col-md-6 {
+        margin-bottom: 20px;
+    }
+}
+.benefits-section {
+    background: #f4f4f4; /* Your preferred background color */
+    padding: 40px 0;
+  }
+  
+  .benefits-section h2 {
+    color:#fc9424; /* Your preferred color for the heading */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  .benefits-section .benefits-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+  }
+  
+  .benefits-section .benefits-list li {
+    position: relative; /* Position relative to allow absolute positioning of the pseudo-element */
+    padding-left: 30px; /* Space for the bullet */
+    margin-bottom: 15px; /* Space between list items */
+    color: white; /* Text color */
+    font-size: 18px; /* Adjust font size as necessary */
+  }
+  
+  .benefits-section .benefits-list li::before {
+    content: "•"; /* Bold dot character */
+    color: #fc9424; /* Bullet color */
+    font-size: 20px; /* Bullet size, can be bigger than the text */
+    font-weight: bold; /* Make the bullet bold */
+    position: absolute; /* Position it absolutely within the li */
+    left: 0; /* Align it to the left */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .benefits-section .benefits-list li {
+      font-size: 16px; /* Smaller font size on mobile */
+    }
+  }
+  
+
+  .working-process-section {
+
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .working-process-details h2{
+}
+.section-title {
+      color: #fc9424 !important;
+    margin-bottom: 1rem;
+  }
+  
+  .section-description {
+    margin-bottom: 2rem;
+  }
+  
+  .process-steps {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .process-step {
+    background-size: cover;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .process-icon {
+    background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent circles */
+    border-radius: 50%;
+    padding: 30px;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 5px 5px 5px #fc9424,  -5px -5px 5px #fc9424;
+}
+
+
+
+  
+  .process-icon span {
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .process-step h3 {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+  
+  .process-step p {
+    color: #ccc;
+  }
+  
+  @media (max-width: 992px) {
+    .process-step {
+      padding: 1rem;
+    }
+  
+    .process-icon {
+      padding: 20px;
+    }
+  
+    .process-icon span {
+      font-size: 1.5rem;
+    }
+  }
+  
