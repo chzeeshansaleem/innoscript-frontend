@@ -3,6 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../../assets/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css"; // Import your custom CSS for hover functionality
+import { Link } from "react-router-dom";
 
 const MyNavbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -15,7 +16,7 @@ const MyNavbar = () => {
     <header className="sticky-top">
       <Navbar expand="lg" className="navbar" variant="dark">
         <Container className="d-flex justify-content-between align-items-center">
-          <Navbar.Brand href="#">
+          <Navbar.Brand as={Link} to="/">
             <img src={logo} alt="Innoscript logo" className="logo-img" />
           </Navbar.Brand>
 
@@ -32,7 +33,7 @@ const MyNavbar = () => {
           <Navbar.Collapse id="basic-navbar-nav" className={`${isCollapsed ? "" : "show"}`}>
             <Nav className="w-100 justify-content-around">
               <NavItemWithHover
-                href="/"
+                to="/"
                 text="Home"
               />
               <NavItemWithHover
@@ -41,15 +42,15 @@ const MyNavbar = () => {
                 isCollapsed={isCollapsed}
               />
               <NavItemWithHover
-                href="/blog"
+                to="/blog"
                 text="Blogs"
               />
               <NavItemWithHover
-                href="/about-us"
+                to="/about-us"
                 text="About us"
               />
               <Nav.Item>
-                <button className="primary-btn" href="#contact">
+                <button className="primary-btn" as={Link} to="/contact">
                   Contact us
                 </button>
               </Nav.Item>
@@ -62,7 +63,7 @@ const MyNavbar = () => {
 };
 
 const NavItemWithHover = ({
-  href,
+  to,
   text,
   isDropdown,
   isCollapsed
@@ -90,17 +91,17 @@ const NavItemWithHover = ({
           </Nav.Link>
           <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
             <ul>
-              <li><a  class="dropdown-item" href="/web-development">Web Development</a></li>
-              <li><a class="dropdown-item" href="/mobile-app-development">Mobile App Development</a></li>
-              <li><a   class="dropdown-item"  href="/custom-software-development">Custom Software Development</a></li>
-              <li><a  class="dropdown-item" href="/devops-services">DevOps Services</a></li>
-              <li><a  class="dropdown-item" href="/ui-ux-designing">UI/UX Designing</a></li>
-              <li><a   class="dropdown-item"href="/seo">SEO</a></li>
+              <li><Link className="dropdown-item" to="/web-development">Web Development</Link></li>
+              <li><Link className="dropdown-item" to="/mobile-app-development">Mobile App Development</Link></li>
+              <li><Link className="dropdown-item" to="/custom-software-development">Custom Software Development</Link></li>
+              <li><Link className="dropdown-item" to="/devops-services">DevOps Services</Link></li>
+              <li><Link className="dropdown-item" to="/ui-ux-designing">UI/UX Designing</Link></li>
+              <li><Link className="dropdown-item" to="/seo">SEO</Link></li>
             </ul>
           </div>
         </div>
       ) : (
-        <Nav.Link href={href}>{text}</Nav.Link>
+        <Nav.Link as={Link} to={to}>{text}</Nav.Link>
       )}
     </Nav.Item>
   );
