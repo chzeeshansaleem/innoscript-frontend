@@ -8,7 +8,7 @@ import './Service.css'
 
 const Services = () => {
   return (
-    <div className="my-5 back">
+    <div className=" back">
       <h2 className="text-center text-warning mb-4 service-heading">Our Services</h2>
       <Row>
         {SERVICES.map(service => (

@@ -2,7 +2,7 @@ import React from 'react';
 
 const WorkingProcessSection = ({ data }) => {
   return (
-    <div className="working-process-section bg-dark">
+    <div className="working-process-section">
       <div className="container">
         <h2 className="section-title text-center text-white">{data.title}</h2>
         <div className="row process-steps">

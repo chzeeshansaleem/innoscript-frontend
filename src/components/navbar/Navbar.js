@@ -12,6 +12,12 @@ const MyNavbar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
+  const closeMenu = () => {
+    if (!isCollapsed) {
+      setIsCollapsed(true);
+    }
+  };
+
   return (
     <header className="sticky-top">
       <Navbar expand="lg" className="navbar" variant="dark">
@@ -30,27 +36,31 @@ const MyNavbar = () => {
             <div className="bar3"></div>
           </div>
 
-          <Navbar.Collapse id="basic-navbar-nav" className={`${isCollapsed ? "" : "show"}`}>
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className={`${isCollapsed ? "" : "show"}`}
+          >
             <Nav className="w-100 justify-content-around">
-              <NavItemWithHover
-                to="/"
-                text="Home"
-              />
+              <NavItemWithHover to="/" text="Home" closeMenu={closeMenu} />
               <NavItemWithHover
                 text="Services"
                 isDropdown
                 isCollapsed={isCollapsed}
+                closeMenu={closeMenu}
               />
-              <NavItemWithHover
-                to="/blog"
-                text="Blogs"
-              />
+              <NavItemWithHover to="/blog" text="Blogs" closeMenu={closeMenu} />
               <NavItemWithHover
                 to="/about-us"
                 text="About us"
+                closeMenu={closeMenu}
               />
               <Nav.Item>
-                <button className="primary-btn" as={Link} to="/contact">
+                <button
+                  className="primary-btn"
+                  as={Link}
+                  to="/contact"
+                  onClick={closeMenu}
+                >
                   Contact us
                 </button>
               </Nav.Item>
@@ -62,12 +72,7 @@ const MyNavbar = () => {
   );
 };
 
-const NavItemWithHover = ({
-  to,
-  text,
-  isDropdown,
-  isCollapsed
-}) => {
+const NavItemWithHover = ({ to, text, isDropdown, isCollapsed, closeMenu }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownToggle = () => {
@@ -91,17 +96,63 @@ const NavItemWithHover = ({
           </Nav.Link>
           <div className={`dropdown-menu ${isDropdownOpen ? "show" : ""}`}>
             <ul>
-              <li><Link className="dropdown-item" to="/web-development">Web Development</Link></li>
-              <li><Link className="dropdown-item" to="/mobile-app-development">Mobile App Development</Link></li>
-              <li><Link className="dropdown-item" to="/custom-software-development">Custom Software Development</Link></li>
-              <li><Link className="dropdown-item" to="/devops-services">DevOps Services</Link></li>
-              <li><Link className="dropdown-item" to="/ui-ux-designing">UI/UX Designing</Link></li>
-              <li><Link className="dropdown-item" to="/seo">SEO</Link></li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/web-development"
+                  onClick={closeMenu}
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/mobile-app-development"
+                  onClick={closeMenu}
+                >
+                  Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/custom-software-development"
+                  onClick={closeMenu}
+                >
+                  Custom Software Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/devops-services"
+                  onClick={closeMenu}
+                >
+                  DevOps Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="dropdown-item"
+                  to="/ui-ux-designing"
+                  onClick={closeMenu}
+                >
+                  UI/UX Designing
+                </Link>
+              </li>
+              <li>
+                <Link className="dropdown-item" to="/seo" onClick={closeMenu}>
+                  SEO
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       ) : (
-        <Nav.Link as={Link} to={to}>{text}</Nav.Link>
+        <Nav.Link as={Link} to={to} onClick={closeMenu}>
+          {text}
+        </Nav.Link>
       )}
     </Nav.Item>
   );
