@@ -21,7 +21,7 @@ padding-bottom: 50px;
     font-size: 3rem;
     margin: 0 0 1rem;
     line-height: 1.2;
-    color: #fc9424;
+    color:  var(--primary-color);
 }
 
 #custom-software-development-hero .hero-content p {
@@ -35,17 +35,7 @@ padding-bottom: 50px;
     background: linear-gradient(120deg, #023047 40%, #011627 100%);
 }
 
-/* Add a dark overlay if the background is too bright */
-/* #custom-software-development-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-} */
+
 
 #custom-software-development-hero .hero-content {
     position: relative;
@@ -89,7 +79,7 @@ padding-bottom: 50px;
     margin-bottom: 50px;
 }
 .custom-software-development-section .custom-software-description-services h2{
-    color: #fc9424;
+    color:  var(--primary-color);
 }
 .custom-software-development-section .custom-software-description-services p{
    color: white;
@@ -138,7 +128,7 @@ padding-bottom: 50px;
     }
 }
 .benefits-section {
-    background: #f4f4f4; /* Your preferred background color */
+    background: var(--background-color); /* Your preferred background color */
     padding: 40px 0;
   }
   
@@ -165,7 +155,7 @@ padding-bottom: 50px;
   
   .benefits-section .benefits-list li::before {
     content: "•"; /* Bold dot character */
-    color: #fc9424; /* Bullet color */
+    color:  var(--primary-color); /* Bullet color */
     font-size: 20px; /* Bullet size, can be bigger than the text */
     font-weight: bold; /* Make the bullet bold */
     position: absolute; /* Position it absolutely within the li */
@@ -182,7 +172,7 @@ padding-bottom: 50px;
   
 
   .working-process-section {
-
+background-color: var(--background-color);;
     padding: 60px 0;
     position: relative;
     overflow: hidden;
@@ -190,7 +180,7 @@ padding-bottom: 50px;
   .working-process-details h2{
 }
 .section-title {
-      color: #fc9424 !important;
+      color:  var(--primary-color) !important;
     margin-bottom: 1rem;
   }
   
@@ -222,7 +212,7 @@ padding-bottom: 50px;
     align-items: center;
     text-align: center;
     position: relative;
-    box-shadow: 5px 5px 5px #fc9424,  -5px -5px 5px #fc9424;
+    box-shadow: 5px 5px 5px var(--primary-color),  -5px -5px 5px var(--primary-color);
 }
 
 

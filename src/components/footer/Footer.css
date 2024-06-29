@@ -1,0 +1,89 @@
+.footer-bg{
+    border-top: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+}
+.headingcolor{
+    color:  var(--secondary-color);
+}
+
+.textDecoration{
+text-decoration: none;
+}
+.linkcolor{
+    color: var(--primary-color);
+}
+.navbar-nav1 .nav-link1 {
+    position: relative; /* Ensure relative positioning */
+}
+
+
+.navbar-nav1 .nav-link1::before {
+    content: ""; 
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color:  var(--primary-color); 
+    transition: width 1s ease; 
+}
+
+
+.navbar-nav1 .nav-link1:hover::before {
+    width: 100%; 
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-bottom .social-icons {
+    display: flex;
+  }
+  
+  .footer-bottom .copyright {
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  
+    .footer-bottom .social-icons {
+      margin-bottom: 1rem;
+    }
+  
+    .footer-bottom .copyright {
+      margin-top: 1rem;
+    }
+  }
+  /* Define styles for social media icons */
+/* Define styles for social media icons */
+.social-icons a {
+    color: white; /* Default color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Apply red color on hover for all icons */
+  .social-icons a:hover .fa-facebook {
+    color: #1877F2; /* Change color to red on hover */
+  }
+
+  .social-icons a:hover .fa-linkedin {
+   color: #0077B5;; /* Change color to red on hover */
+  }
+
+  .social-icons a:hover .fa-instagram {
+    color: #C13584; /* Change color to red on hover */
+  }
+
+  .social-icons a:hover .fa-twitter {
+    color: #1DA1F2; /* Change color to red on hover */
+  }
+  

@@ -10,6 +10,8 @@ import { Route, Routes } from 'react-router-dom';
 import NotFoundPage from './components/404Page/NotFoundPage';
 import AboutUs from './components/aboutUs/AboutUs';
 import WebDevelopment from './components/services/webDevelopment/WebDevelopment';
+import Footer from './components/footer/Footer';
+import ScrollToTop from './components/scrollTop/ScrollTop';
 
 const App = ()=> {
   useEffect(() => {
@@ -21,7 +23,7 @@ const App = ()=> {
   return (
 
       <div>
-    
+    <ScrollToTop/>
       <MyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,7 +31,7 @@ const App = ()=> {
         <Route path="/web-development" element={<WebDevelopment/>}/>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-  
+      <Footer/> 
       </div>
 
   );
