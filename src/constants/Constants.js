@@ -12,7 +12,7 @@ export const SERVICES = [
     title: "Custom Software Development",
     description:
       "Tailored software solutions to meet the specific needs of your business.",
-    link: "/custom-software",
+    link: "/custom-software-development",
     aos: "fade-up",
     delay: "100",
   },
@@ -20,7 +20,7 @@ export const SERVICES = [
     title: "App Development",
     description:
       "Innovative mobile applications to enhance your digital presence.",
-    link: "/app-development",
+    link: "/mobile-app-development",
     aos: "fade-up",
     delay: "200",
   },
@@ -36,7 +36,7 @@ export const SERVICES = [
     title: "DevOps Services",
     description:
       "Enhancing your software development lifecycle with modern DevOps practices.",
-    link: "/devops",
+    link: "/devops-services",
     aos: "fade-up",
     delay: "400",
   },
@@ -44,7 +44,7 @@ export const SERVICES = [
     title: "UI/UX",
     description:
       "Creating engaging and intuitive user interfaces and experiences.",
-    link: "/ui-ux",
+    link: "/ui-ux-designing",
     aos: "fade-up",
     delay: "500",
   },
@@ -186,6 +186,134 @@ export const MOBILE_APP_DEVELOPMENT = {
       { number: "02", title: "Current State Evaluation", description: "Assess the client's existing IT infrastructure, systems, and processes." },
       { number: "03", title: "Implementation and Execution", description: "Execute the project plan, which may involve deploying new software, hardware, or IT processes." },
       { number: "04", title: "Evaluation and Maintenance", description: "Assess the results of the implemented solutions against the predefined goals." }
+    ]
+  }
+};
+
+export const DEVOPS = {
+  heroSection: {
+    title: "DevOps",
+    description: "DevOps bridges the gap between development and operations, fostering a collaborative culture and streamlining processes to enhance software delivery and infrastructure management."
+  },
+  serviceDescription: {
+    title: "Services Description",
+    description: "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) aimed at shortening the systems development life cycle and providing continuous delivery with high software quality. It emphasizes automation, collaboration, and integration to improve the efficiency, speed, and reliability of software delivery and infrastructure changes.",
+    image: "./assets/images/devops.jpg",
+    steps: [
+      "Continuous Integration",
+      "Continuous Delivery",
+      "Infrastructure as Code",
+      "Monitoring and Logging",
+      "Collaboration and Communication"
+    ]
+  },
+  benefits: {
+    title: "Benefits",
+    items: [
+      "Faster Time to Market: DevOps practices accelerate software delivery and updates.",
+      "Improved Collaboration: Enhances cooperation between development and operations teams.",
+      "Higher Quality: Continuous testing and integration result in better software quality.",
+      "Increased Efficiency: Automation reduces manual tasks, freeing up resources for innovation.",
+      "Scalability: Easily scale operations and manage infrastructure with Infrastructure as Code.",
+      "Reliability: Continuous monitoring and logging ensure systems' health and performance.",
+      "Security: Integrated security practices (DevSecOps) ensure robust and secure applications."
+    ]
+  },
+  workingProcess: {
+    title: "Working Process",
+    description: "Our DevOps process involves stages that integrate development and operations for faster, more reliable software delivery.",
+    image: "./assets/images/devops-process.jpg",
+    steps: [
+      { number: "01", title: "Planning", description: "Define goals and requirements, establish timelines, and plan resources." },
+      { number: "02", title: "Development", description: "Develop and test applications using continuous integration and delivery practices." },
+      { number: "03", title: "Deployment", description: "Deploy applications with automated tools ensuring seamless delivery." },
+      { number: "04", title: "Monitoring", description: "Monitor systems and applications to ensure optimal performance and resolve issues quickly." }
+    ]
+  }
+};
+
+export const SEO = {
+  heroSection: {
+    title: "Search Engine Optimization (SEO)",
+    description: "SEO enhances your online visibility and drives organic traffic to your website through optimized content and strategic practices."
+  },
+  serviceDescription: {
+    title: "Services Description",
+    description: "Search Engine Optimization (SEO) is the practice of improving the quality and quantity of website traffic by increasing the visibility of a website or a web page to users of a web search engine. SEO encompasses both the technical and creative elements required to improve rankings, drive traffic, and increase awareness in search engines.",
+    image: "./assets/images/seo.jpg",
+    steps: [
+      "Keyword Research",
+      "On-Page Optimization",
+      "Content Creation",
+      "Link Building",
+      "Technical SEO",
+      "Performance Monitoring"
+    ]
+  },
+  benefits: {
+    title: "Benefits",
+    items: [
+      "Increased Visibility: Higher search engine rankings lead to greater visibility and traffic.",
+      "Better User Experience: Optimized websites provide a better experience for users.",
+      "Credibility and Trust: High rankings increase the trust and credibility of your website.",
+      "Cost-Effective: SEO is a cost-effective marketing strategy that delivers long-term results.",
+      "Competitive Advantage: Stay ahead of competitors by ranking higher in search results.",
+      "Higher ROI: SEO often provides a higher return on investment compared to other marketing strategies.",
+      "Local Engagement: Enhance local search visibility to attract nearby customers."
+    ]
+  },
+  workingProcess: {
+    title: "Working Process",
+    description: "Our SEO process is a comprehensive approach that covers all aspects of optimization to improve your website's search engine rankings.",
+    image: "./assets/images/seo-process.jpg",
+    steps: [
+      { number: "01", title: "Audit and Analysis", description: "Conduct a thorough SEO audit and competitor analysis." },
+      { number: "02", title: "Strategy Development", description: "Create a customized SEO strategy based on findings and goals." },
+      { number: "03", title: "Implementation", description: "Implement on-page and off-page SEO techniques." },
+      { number: "04", title: "Monitoring and Reporting", description: "Monitor performance and adjust strategies for continuous improvement." }
+    ]
+  }
+};
+
+export const UI_UX = {
+  heroSection: {
+    title: "UI/UX Design",
+    description: "Crafting intuitive and aesthetically pleasing user interfaces and experiences that enhance user satisfaction and engagement."
+  },
+  serviceDescription: {
+    title: "Services Description",
+    description: "UI/UX design focuses on creating user-friendly and visually appealing interfaces for digital products. It involves understanding user behavior, designing intuitive interfaces, and ensuring a seamless user experience to achieve business goals.",
+    image: "./assets/images/ui-ux.jpg",
+    steps: [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Visual Design",
+      "User Testing",
+      "Iteration and Improvement"
+    ]
+  },
+  benefits: {
+    title: "Benefits",
+    items: [
+      "Enhanced User Satisfaction: Intuitive design improves user experience and satisfaction.",
+      "Increased Engagement: Attractive interfaces lead to higher user engagement and retention.",
+      "Improved Usability: Simplifies navigation and functionality, making it easier for users.",
+      "Brand Consistency: Consistent design elements strengthen brand identity.",
+      "Higher Conversion Rates: Optimized user journeys lead to increased conversions and sales.",
+      "Competitive Advantage: Superior design can set your product apart from competitors.",
+      "Customer Loyalty: Positive experiences foster long-term customer loyalty."
+    ]
+  },
+  workingProcess: {
+    title: "Working Process",
+    description: "Our UI/UX design process ensures that we create products that are not only visually appealing but also user-friendly and effective.",
+    image: "./assets/images/ui-ux-process.jpg",
+    steps: [
+      { number: "01", title: "Research and Analysis", description: "Understand user needs and business goals through research." },
+      { number: "02", title: "Design", description: "Create wireframes, prototypes, and visual designs based on research insights." },
+      { number: "03", title: "Testing", description: "Conduct user testing to gather feedback and identify areas for improvement." },
+      { number: "04", title: "Iteration", description: "Refine and iterate designs based on user feedback and testing results." }
     ]
   }
 };

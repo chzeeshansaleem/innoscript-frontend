@@ -10,7 +10,8 @@
     background-color: #e9ecef;
   }
   
-  .service-card .card-body {
+   .card-body {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
