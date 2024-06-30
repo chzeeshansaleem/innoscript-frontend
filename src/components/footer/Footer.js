@@ -70,16 +70,16 @@ const Footer = () => {
                   </Link>
                 </p>
                 <p className="">
-                  <Link to="/dev-ops" className="headingcolor textDecoration">
+                  <Link to="/devops-services" className="headingcolor textDecoration">
                     <span className="navbar-nav1">
                       <span className="nav-link1">DevOps Services</span>
                     </span>
                   </Link>
                 </p>
                 <p className="">
-                  <Link to="/ui-ux" className="headingcolor textDecoration">
+                  <Link to="/ui-ux-designing" className="headingcolor textDecoration">
                     <span className="navbar-nav1">
-                      <span className="nav-link1">UI/UX Design</span>
+                      <span className="nav-link1">UI/UX Designing</span>
                     </span>
                   </Link>
                 </p>
